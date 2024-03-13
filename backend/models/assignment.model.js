@@ -15,6 +15,8 @@ const assingmentSchema=mongoose.Schema({
         ref: 'User' // Reference to the User model
     }
 
+},{
+    versionKey:false
 })
 
 const AssignmentModel=mongoose.model('assignement',assingmentSchema);

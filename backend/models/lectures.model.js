@@ -10,6 +10,8 @@ const lectureSchema=mongoose.Schema({
     "link": String,
     "created_at": Date,
     "updated_at": Date
+},{
+    versionKey:false
 })
 
 const LectureModal=mongoose.model('lecture',lectureSchema);

@@ -1,13 +1,14 @@
 const mongoose=require('mongoose');
 
 const userSchema=mongoose.Schema({
-    "_id": ObjectId,
-    "username": String,
-    "password": String,
+    "username": {type:String},
+    "password":  {typeof:String,required:true},
     "role": String, // Admin or Student
-    "email": String,
+    "email":  {typeof:String,required:true},
+},{
+    versionKey:false
 })
 
-const UserModal=mongoose.model('user',userSchema);
+const UserModel=mongoose.model('user',userSchema);
 
-module.exports={UserModal};
+module.exports={UserModel};

@@ -6,6 +6,8 @@ const courseSchema=mongoose.Schema({
     "description": String,
     "created_at": Date,
     "updated_at": Date
+},{
+    versionKey:false
 })
 
 const CourseModel=mongoose.model('course',courseSchema);
